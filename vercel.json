@@ -1,6 +1,9 @@
 
 {
   "version": 2,
+  "engines": {
+    "node": "18.x"
+  },
   "builds": [
     {
       "src": "image_classifier/wsgi.py",
