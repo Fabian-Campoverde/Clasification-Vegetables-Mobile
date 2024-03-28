@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "image_classifier.wsgi.application"
+WSGI_APPLICATION = "image_classifier.wsgi.app"
 
 
 # Database

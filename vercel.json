@@ -17,7 +17,11 @@
     {
       "src": "/(.*)",
       "dest": "image_classifier/wsgi.py"
-    }
+    },
+    {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+      }
   ]
 }
 
