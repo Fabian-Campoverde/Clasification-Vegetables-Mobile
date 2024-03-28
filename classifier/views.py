@@ -80,7 +80,7 @@ from PIL import Image, ImageTk
 import cv2
 import numpy as np
 from keras.models import load_model
-import tensorflow as tf
+from keras.preprocessing.image import ImageDataGenerator
 from keras.applications.imagenet_utils import preprocess_input
 import scipy
 import tkinter as tk
@@ -121,15 +121,15 @@ mapeo_clases = {
 
 # Función para preprocesar la imagen
 def preprocess_image(img):
-    datagen = tf.keras.preprocessing.image.ImageDataGenerator(
-        rotation_range=0,  
-        zoom_range=0,  
-        width_shift_range=0,  
-        height_shift_range=0,  
-        horizontal_flip=False,  
-        vertical_flip=False,  
-        preprocessing_function=preprocess_input
-    )
+    datagen = ImageDataGenerator(
+    rotation_range=0,  
+    zoom_range=0,  
+    width_shift_range=0,  
+    height_shift_range=0,  
+    horizontal_flip=False,  
+    vertical_flip=False,  
+    preprocessing_function=preprocess_input
+)
     
     img = cv2.resize(img, (width_shape, height_shape))
     img = np.expand_dims(img, axis=0)
