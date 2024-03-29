@@ -9,7 +9,7 @@
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.8" }
     },
     {
-        "src": "build-files.sh",
+        "src": "build.sh",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.8" }
       }
