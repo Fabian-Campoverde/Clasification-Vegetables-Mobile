@@ -81,7 +81,7 @@ import cv2
 import numpy as np
 import tensorflow as tf
 from keras.models import load_model
-# from keras.preprocessing.image import ImageDataGenerator
+from keras.preprocessing.image import ImageDataGenerator
 from keras.applications.imagenet_utils import preprocess_input
 import scipy
 
@@ -121,7 +121,7 @@ mapeo_clases = {
 
 # Función para preprocesar la imagen
 def preprocess_image(img):
-    datagen = tf.keras.preprocessing.image.ImageDataGenerator(
+    datagen = ImageDataGenerator(
     rotation_range=0,  
     zoom_range=0,  
     width_shift_range=0,  
