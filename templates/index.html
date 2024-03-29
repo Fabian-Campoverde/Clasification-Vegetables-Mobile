@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MobileNet</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnRiG5mDa3B-_NfelvtpJgwkI1jBxDAF_VQ6gDHp01Eg&s"  type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
@@ -17,57 +20,14 @@
   />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <style> 
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            
-        }
-        body{
-            background: linear-gradient(to right,#2441ab71, #e71b1b62),url(https://static.vecteezy.com/system/resources/previews/006/036/258/non_2x/vegetables-background-with-text-space-free-vector.jpg);
-            
-            background-size: cover;
-            font-family: "Lato", sans-serif;
-            font-weight: 400;
-            line-height: 1.7;
-            padding: 1.875rem;
-        }
-        .header{
-            height: 20vh;
-            background: linear-gradient(to right, #4CAF50, #8BC34A);
-            clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-        }
-        
-        .heading-primary{
-            
-            font-weight: 800;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 1.0rem;
-        }
 
-        .heading-primary span {
-            background-image: url('https://static.vecteezy.com/system/resources/previews/006/036/258/non_2x/vegetables-background-with-text-space-free-vector.jpg');
-            background-size: cover;
-            background-position: center;
-            color: transparent; /* Oculta el texto para que solo se muestre la imagen de fondo */
-            -webkit-background-clip: text; /* Hace que la imagen de fondo solo se muestre dentro del texto */
-            background-clip: text;
-        }
         
-        @media only screen and (max-widht: 37.5rem){
-            .heading-primary{
-            
-                font-weight: 700;
-                letter-spacing: 0.2rem;
-            }
-        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header class="header">
-        <div class="text-center p-5">
+        <div class="text-center" id="text1">
         <h1 class="heading-primary">
         <span>Vegetables Clasification</span>
         </h1>
