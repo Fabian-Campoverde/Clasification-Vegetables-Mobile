@@ -79,11 +79,11 @@ from django.conf import settings
 from PIL import Image, ImageTk
 import cv2
 import numpy as np
+import tensorflow as tf
 from keras.models import load_model
-from keras.preprocessing.image import ImageDataGenerator
+# from keras.preprocessing.image import ImageDataGenerator
 from keras.applications.imagenet_utils import preprocess_input
 import scipy
-import tkinter as tk
 
 # Cargar el modelo previamente entrenado
 custom_Model = load_model("model_Mobilenet-75_epochs.h5")
@@ -121,7 +121,7 @@ mapeo_clases = {
 
 # Función para preprocesar la imagen
 def preprocess_image(img):
-    datagen = ImageDataGenerator(
+    datagen = tf.keras.preprocessing.image.ImageDataGenerator(
     rotation_range=0,  
     zoom_range=0,  
     width_shift_range=0,  
